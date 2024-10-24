@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title> Las aventuras de mi gato Lucky </title>
+
+     <meta name = "keywords" content = "cat, Lucky, pet, animal">
+
+	   <style>  
+		   
+		   .contenedor{
+			             display: flex;
+			             justify-content: right;
+			             background-color:#DB1215;
+			             padding: 30px;
+		              }
+		   .btn1{
+			   display: inline-block;
+			   background-color:chartreuse;
+			   border: 5px;
+			   padding: 10px;
+			   color:black;
+			   margin-right: 10px;
+			   text-decoration: none;
+			    }
+		   .btn2{
+			   display: inline-block;
+			   background-color:black;
+			   border: 5px;
+			   padding: 10px;
+			   color:chartreuse;
+			   margin-right: 10px;
+			   text-decoration: none;
+			    }
+	  
+	  </style>
+	  
+	  <style>
+      .gatos-contenido {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+	  
+	 <style>
+  body {
+    background-image:url('data:image/jpeg;base64,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');
+    background-repeat: no-repeat;
+	background-attachment: fixed;  
+    background-size: cover;
+	}
+</style>
+	  
+      </head>
+
+  <body>
+  <!-- <body background="574990b1daac37176e393215439b83d5.jpg">-->
+	  <h1><center><p style="color:#00FF00";><b><u><i>LAS AVENTURAS DE MI GATO LUCKY</i></u></b> </P></center> </h1>
+	
+          <div class="contenedor">   <!-- contenedor de stilo de los botones -->
+		  <!--<button class="btn1">boton1</button>
+		      <button class="btn2">boton2</button>-->
+			  
+	<a href="https://es-la.facebook.com/login/device-based/regular/login/" class="btn1">FACEBOOK</a>
+    <a href="https://www.whatsapp.com/?lang=es_LA" class="btn2" class="btn2">WHATSAPP</a>
+			  
+		  </div>
+	
+	
+	
+	<td colspan="2"><table width="500" height="50" border="3">
+        <tr>
+          <td><script type="text/javascript">
+
+var memorywidth="500px" //scroller width
+var memoryheight="30px" //scroller height
+var memorybgcolor="#DEFDD9" //scroller background
+var memorypadding="4px" //padding applied to the scroller. 0 for non.
+var borderCSS="border: 1px solid black;" //Border CSS, applied to scroller to give border.
+
+var memoryspeed=2 //Scroller speed (larger is faster 1-10)
+var pauseit=1 //Pause scroller onMousever (0=no. 1=yes)?
+
+var persistlastviewedmsg=1 //should scroller's position persist after users navigate away (1=yes, 0=no)?
+var persistmsgbehavior="onload" //set to "onload" or "onclick".
+
+//Specify the scroller's content (don't delete <nobr> tag)
+//Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
+
+var memorycontent='<nobr><span style="font: bold 20px Verdana">GRACIAS POR VISITARNOS <a href="fotos.html">AQUI FOTOS.</a> DEJENOS SU APRECIACION DE LA PAGINA, please consider <a href="http://www.youtube.com/link.htm">linking to</a> or <a href="http://www.telegram.com/recommendit/">recommending</a> PAGINA DE GATOS.</span></nobr>'
+
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+var combinedcssTable="width:"+(parseInt(memorywidth)+6)+"px;background-color:"+memorybgcolor+";padding:"+memorypadding+";"+borderCSS+";"
+var combinedcss="width:"+memorywidth+";height:"+memoryheight+";"
+
+var divonclick=(persistlastviewedmsg && persistmsgbehavior=="onclick")? 'onClick="savelastmsg()" ' : ''
+memoryspeed=(document.all)? memoryspeed : Math.max(1, memoryspeed-1) //slow speed down by 1 for NS
+var copyspeed=memoryspeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-10000px">'+memorycontent+'</span>')
+var actualwidth=''
+var memoryscroller
+
+if (window.addEventListener)
+window.addEventListener("load", populatescroller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", populatescroller)
+else if (document.all || document.getElementById)
+window.onload=populatescroller
+
+function populatescroller(){
+memoryscroller=document.getElementById? document.getElementById("memoryscroller") : document.all.memoryscroller
+memoryscroller.style.left=parseInt(memorywidth)+8+"px"
+if (persistlastviewedmsg && get_cookie("lastscrollerpos")!="")
+revivelastmsg()
+memoryscroller.innerHTML=memorycontent
+actualwidth=document.all? temp.offsetWidth : document.getElementById("temp").offsetWidth
+lefttime=setInterval("scrollmarquee()",20)
+}
+
+function get_cookie(Name) {
+var search = Name + "="
+var returnvalue = ""
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) {
+offset += search.length
+end = document.cookie.indexOf(";", offset)
+if (end == -1)
+end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function savelastmsg(){
+document.cookie="lastscrollerpos="+memoryscroller.style.left
+}
+
+function revivelastmsg(){
+lastscrollerpos=parseInt(get_cookie("lastscrollerpos"))
+memoryscroller.style.left=parseInt(lastscrollerpos)+"px"
+}
+
+if (persistlastviewedmsg && persistmsgbehavior=="onload")
+window.onunload=savelastmsg
+
+function scrollmarquee(){
+if (parseInt(memoryscroller.style.left)>(actualwidth*(-1)+8))
+memoryscroller.style.left=parseInt(memoryscroller.style.left)-copyspeed+"px"
+else
+memoryscroller.style.left=parseInt(memorywidth)+8+"px"
+}
+
+if (iedom){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0" style="'+combinedcssTable+'"><td>')
+write('<div style="position:relative;overflow:hidden;'+combinedcss+'" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=memoryspeed">')
+write('<div id="memoryscroller" style="position:absolute;left:0px;top:0px;" '+divonclick+'></div>')
+write('</div>')
+document.write('</td></table>')
+}
+}
+</script></td>
+        </tr>
+      </table></td>
+	
+	
+	
+    <div id = "contenido principal">
+      <p><font size="12">Mi gato Lucky tiene muchas aventuras. Ayer <a href="https://es.vecteezy.com/vectores-gratis/raton"> atrapó un ratón </a>, ¡y esta mañana atrapó dos!</font>  </p>
+      <p><b> Aquí hay una foto de Lucky:</b> </p>
+      <center><img src="file:///C|/AppServ/www/WEB/migato.jpg" alt = alt=" width="300" height="300"></center>
+    </div>
+
+    <div id = "barra lateral">
+
+      <h2> ¡Compra nuestros productos! </h2>
+    	<p><font size="15">Algunos de nuestros productos incluyen <span class = "product"> SuperWidgets </span>.</font> </p>
+		<center><table background="D:\San Gines\CLASES\5to sec\3ER BIMESTRE\clase5\color-solido-2qazhxjvr6qfvh02.jpg" border="15px"> 
+        <tr>
+              <td>ROPA</td>
+              <td>COMIDA</td>
+              <td>DETALLES</td>
+         </tr>
+          <tr>
+              <td>CHOMPAS&nbsp;</td>
+              <td>GALLETAS&nbsp;&nbsp;</td>
+              <td>COLLAR DE ENTRENAMIENTO&nbsp;</td>
+          </tr>
+		   <tr>
+              <td>&nbsp;GORROS</td>
+              <td>HUESOS DE SABORES&nbsp;</td>
+              <td>ZAPATOS DE CUERO DE RES&nbsp;</td>
+          </tr>
+											<tr>
+              <td>&nbsp;GORROS</td>
+              <td>ENLATADOS&nbsp;</td>
+              <td>CAPA DE SUPERHEROE&nbsp;</td>
+          </tr>
+	</table></center>	
+		  <br>
+          <center>
+		  <p style="color:#00FF00";><font size="6"><b><i>VIDEOS GRACIOSOS</i></b></font> </P>
+		  </center>
+		  <br>
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/GfXGYDgTasQ?si=-Brd9W9QCu0VCnLb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		  <iframe width="560" height="315" src="https://www.youtube.com/embed/vgiBuoVRt0Y?si=Nv9aeBK2Yf4tIfmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		  
+		  <br>
+		  
+		  
+		  <center>
+		  <script type="text/javascript">
+
+var trans_width='450px' //slideshow width
+var trans_height='350px' //slideshow height
+var pause=7000 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+var degree=10 //animation speed. Greater is faster.
+
+var slideshowcontent=new Array()
+//Define slideshow contents: [image URL, OPTIONAL LINK, OPTIONAL LINK TARGET]
+slideshowcontent[0]=["photo1.jpg", "http://www.google.com", "_new"]
+slideshowcontent[1]=["photo2.jpg", "http://www.facebook.com", ""]
+slideshowcontent[2]=["photo3.jpg", "http://www.poki.com", ""]
+
+
+////NO need to edit beyond here/////////////
+
+var bgcolor='white'
+
+var imageholder=new Array()
+for (i=0;i<slideshowcontent.length;i++){
+imageholder[i]=new Image()
+imageholder[i].src=slideshowcontent[i][0]
+}
+
+var ie4=document.all
+var dom=document.getElementById&&navigator.userAgent.indexOf("Opera")==-1
+
+if (ie4||dom)
+document.write('<div style="position:relative;width:'+trans_width+';height:'+trans_height+';overflow:hidden"><div id="canvas0" style="position:absolute;background-color:'+bgcolor+';width:'+trans_width+';height:'+trans_height+';left:-'+trans_width+';filter:alpha(opacity=20);-moz-opacity:0.2;"></div><div id="canvas1" style="position:absolute;background-color:'+bgcolor+';width:'+trans_width+';height:'+trans_height+';left:-'+trans_width+';filter:alpha(opacity=20);-moz-opacity:0.2;"></div></div>')
+else if (document.layers){
+document.write('<ilayer id=tickernsmain visibility=hide width='+trans_width+' height='+trans_height+' bgColor='+bgcolor+'><layer id=tickernssub width='+trans_width+' height='+trans_height+' left=0 top=0>'+'<img src="'+slideshowcontent[0][0]+'"></layer></ilayer>')
+}
+
+var curpos=trans_width*(-1)
+var curcanvas="canvas0"
+var curindex=0
+var nextindex=1
+
+function getslidehtml(theslide){
+var slidehtml=""
+if (theslide[1]!="")
+slidehtml='<a href="'+theslide[1]+'" target="'+theslide[2]+'">'
+slidehtml+='<img src="'+theslide[0]+'" border="0">'
+if (theslide[1]!="")
+slidehtml+='</a>'
+return slidehtml
+}
+
+function moveslide(){
+if (curpos<0){
+curpos=Math.min(curpos+degree,0)
+tempobj.style.left=curpos+"px"
+}
+else{
+clearInterval(dropslide)
+if (crossobj.filters)
+crossobj.filters.alpha.opacity=100
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=1
+nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj.innerHTML=getslidehtml(slideshowcontent[curindex])
+nextindex=(nextindex<slideshowcontent.length-1)? nextindex+1 : 0
+setTimeout("rotateslide()",pause)
+}
+}
+
+function rotateslide(){
+if (ie4||dom){
+resetit(curcanvas)
+crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.style.zIndex++
+if (crossobj.filters)
+document.all.canvas0.filters.alpha.opacity=document.all.canvas1.filters.alpha.opacity=20
+else if (crossobj.style.MozOpacity)
+document.getElementById("canvas0").style.MozOpacity=document.getElementById("canvas1").style.MozOpacity=0.2
+var temp='setInterval("moveslide()",50)'
+dropslide=eval(temp)
+curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+}
+else if (document.layers){
+crossobj.document.write(getslidehtml(slideshowcontent[curindex]))
+crossobj.document.close()
+}
+curindex=(curindex<slideshowcontent.length-1)? curindex+1 : 0
+}
+
+function jumptoslide(which){
+curindex=which
+rotateslide()
+}
+
+function resetit(what){
+curpos=parseInt(trans_width)*(-1)
+var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+crossobj.style.left=curpos+"px"
+}
+
+function startit(){
+crossobj=ie4? eval("document.all."+curcanvas) : dom? document.getElementById(curcanvas) : document.tickernsmain.document.tickernssub
+if (ie4||dom){
+crossobj.innerHTML=getslidehtml(slideshowcontent[curindex])
+rotateslide()
+}
+else{
+document.tickernsmain.visibility='show'
+curindex++
+setInterval("rotateslide()",pause)
+}
+}
+
+if (window.addEventListener)
+window.addEventListener("load", startit, false)
+else if (window.attachEvent)
+window.attachEvent("onload", startit)
+else if (ie4||dom||document.layers)
+window.onload=startit
+
+</script>
+</center>
+
+	  
+	<p style="color:#0000CD";><font size="12"><b>Aceptamos:</b></font></p>  
+
+     <ol> 
+
+        <li><font size="8"> Tarjetas de crédito</font></li>  
+        <li><font size="8"> Efectivo</font></li> 
+        <li><font size="8"> Cheques</font></li> 
+
+      </ol> 
+
+    </div>
+		
+     
+<center><button type="button" name="BOTON DE PAGO VISA" >  
+
+      <a href="https://www.visa.com.pe/"> botón para pagos</a>
+	  <br>
+      <b>VISA</b>
+        </button><br>
+	    <button type="button" name="BOTON DE PAGO MASTERCARD">
+	  <a href="https://www.mastercard.com.pe/"> <img src="D:\San Gines\CLASES\3ro sec\2do Bimestre\clase4\mastercard.jpg" alt = alt=" width="120" height="60">
+	    </button>
+</center>
+		  
+  </body>
+
+</html>
